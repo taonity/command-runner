@@ -1,0 +1,23 @@
+version: '2.4'
+
+services:
+  command-runner:
+    image: generaltao725/command-runner
+    volumes: 
+      - //var/run/docker.sock:/var/run/docker.sock
+      - ./shared:/etc/runner/scripts/shared
+    environment:
+      - COMMAND_RUNNER_GROUP=group-1
+    depends_on:
+      alpine:
+        condition: service_started
+    
+
+  alpine:
+    image: alpine:3.17.2
+    command: tail -f /dev/null
+    labels:
+      - command-runner.group=group-1
+      - command-runner.user=testuser
+      - command-runner.shell=/bin/sh -c
+      - command-runner.command=whoami
