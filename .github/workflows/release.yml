@@ -12,6 +12,7 @@ jobs:
   push_to_registry:
     name: Build & Push image to DockerHub
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     permissions:
       packages: write
       contents: read
