@@ -21,4 +21,5 @@ services:
       - command-runner.user=testuser
       - command-runner.shell=/bin/sh -c
       - command-runner.command=whoami
+
       
