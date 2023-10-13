@@ -1,5 +1,5 @@
 # command-runner
-[generaltao725/command-runner](https://hub.docker.com/repository/docker/generaltao725/command-runner/general) is a tool for running commands in docker containers. It is useful for container maintenance operations.
+[generaltao725/command-runner](https://hub.docker.com/repository/docker/generaltao725/command-runner/general) is the tool for running commands in docker containers. It is useful for container maintenance operations.
 
 ### Usage
 The easiest way of running the tool is using docker-compose. Here is an [example](test\run-scripts-on-containers\docker-compose.yml) of the tool usage.
