@@ -1,4 +1,4 @@
-FROM alpine:3.18.4
+FROM alpine:3.19.1
 WORKDIR /etc/runner
 COPY assets /etc/runner/scripts/assets
 RUN mv /etc/runner/scripts/assets/runner.sh /usr/local/bin/runner
